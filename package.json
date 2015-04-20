@@ -1,0 +1,41 @@
+{
+  "name": "grunt-lesshint",
+  "description": "Lint lesscss files",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kokarn/grunt-lesshint",
+  "author": {
+    "name": "Oskar Risberg",
+    "email": "kokarn@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kokarn/grunt-lesshint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kokarn/grunt-lesshint/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kokarn/grunt-lesshint/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

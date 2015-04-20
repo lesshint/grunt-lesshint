@@ -36,7 +36,12 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "less",
+    "lesscss",
+    "lint",
+    "linter",
+    "linting"
   ],
   "dependencies": {
     "chalk": "^1.0.0",

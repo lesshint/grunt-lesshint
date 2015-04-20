@@ -8,46 +8,50 @@
 
 'use strict';
 
-var lesshint = require( 'lesshint' ),
+var lesshint = require( 'LessHint' ),
     chalk = require( 'chalk' );
 
-module.exports = function(grunt) {
+module.exports = function( grunt ){
+    grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
+        var options = this.options(),
+            linter = new lesshint(),
+            failOnError = true;
 
-    // Please see the Grunt documentation for more information regarding task
-    // creation: http://gruntjs.com/creating-tasks
+        linter.configure( {
+            "spaceAfterPropertyColon": {
+                "enabled": true,
+                "style": "one_space"
+            },
 
-    grunt.registerMultiTask('lesshint', 'Lint lesscss files', function() {
-        // Merge task-specific and/or target-specific options with these defaults.
-        var options = this.options({
-            punctuation: '.',
-            separator: ', '
-        });
+            "spaceBeforeBrace": {
+                "enabled": true,
+                "style": "one_space"
+            }
+        } );
 
-        // Iterate over all specified file groups.
-        this.files.forEach(function(f) {
-            // Concat specified files.
-            var src = f.src.filter(function(filepath) {
-                // Warn on and remove invalid source files (if nonull was set).
-                if (!grunt.file.exists(filepath)) {
-                    grunt.log.warn('Source file "' + chalk.cyan( filepath ) + '" not found.');
-                    return false;
-                } else {
-                    return true;
-                }
-            }).map(function(filepath) {
-                // Read file source.
-                return grunt.file.read(filepath);
-            }).join(grunt.util.normalizelf(options.separator));
+        this.files.forEach( function( files ){
+            if( !files.src.length ){
+                return grunt.fail.warn( 'No source files were found.' );
+            }
 
-            // Handle options.
-            src += options.punctuation;
+            try {
+                files.src.forEach( function( filepath ){
+                    var input = grunt.file.read( filepath ),
+                        output = linter.checkString( input );
 
-            // Write the destination file.
-            grunt.file.write(f.dest, src);
+                    if( output.length > 0 ){
+                        output.forEach( function( errorObject ){
+                            grunt.log.warn( 'Error on line ' + errorObject.line + ': ' + errorObject.message );
+                        });
+                    }
 
-            // Print a success message.
-            grunt.log.writeln('File "' + chalk.green( f.dest ) + '" created.');
+                    if( output.length > 0 && failOnError ){
+                        grunt.fail.warn( 'Found ' + output.length + ' errors' );
+                    }
+                });
+            } catch ( error ){
+                grunt.fail.fatal( error );
+            }
         });
     });
-
 };

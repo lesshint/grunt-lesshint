@@ -37,12 +37,20 @@ module.exports = function( grunt ){
             try {
                 files.src.forEach( function( filepath ){
                     var input = grunt.file.read( filepath ),
-                        output = linter.checkString( input );
+                        output = linter.checkString( input ),
+                        inputArray;
 
                     if( output.length > 0 ){
+                        inputArray = input.toString().split( '\n' );
+
+                        grunt.log.writeln();
+                        grunt.log.writeln( '  ' + chalk.bold( filepath ) );
                         output.forEach( function( errorObject ){
-                            grunt.log.warn( 'Error on line ' + errorObject.line + ': ' + errorObject.message );
+                            grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.dim( inputArray[ errorObject.line - 1 ] ) );
+                            grunt.log.writeln( new Array( errorObject.column + 8 ).join( ' ' ) + '^ ' + errorObject.message );
                         });
+
+                        grunt.log.writeln();
                     }
 
                     if( output.length > 0 && failOnError ){

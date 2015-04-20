@@ -8,6 +8,9 @@
 
 'use strict';
 
+var lesshint = require( 'lesshint' ),
+    chalk = require( 'chalk' );
+
 module.exports = function(grunt) {
 
     // Please see the Grunt documentation for more information regarding task

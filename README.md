@@ -47,4 +47,7 @@ Set `force` to `true` to report lesshint errors but not fail the task.
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+|Date|Version|Changes|
+|---|---|---|
+|2015-04-21|0.1.1|Readme fixes|
+|2015-04-21|0.1.0|Initial release|

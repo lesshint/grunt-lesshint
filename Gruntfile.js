@@ -26,6 +26,14 @@ module.exports = function( grunt ){
         lesshint: {
             files: {
                 src: [ 'test/fixtures/**/*.less' ]
+            },
+            use_force: {
+                options: {
+                    force: true
+                },
+                files: {
+                    src: [ 'test/fixtures/**/*.less' ]
+                }
             }
         },
 

@@ -31,6 +31,11 @@ module.exports = function( grunt ){
         } );
 
         this.files.forEach( function( files ){
+            var errorCount = 0,
+                errorFileCount = 0,
+                cleanFileCount = 0,
+                response;
+
             if( !files.src.length ){
                 return grunt.fail.warn( 'No source files were found.' );
             }
@@ -42,16 +47,20 @@ module.exports = function( grunt ){
                         inputArray;
 
                     if( output.length > 0 ){
+                        errorFileCount = errorFileCount + 1;
                         inputArray = input.toString().split( '\n' );
 
                         grunt.log.writeln();
-                        grunt.log.writeln( '  ' + chalk.bold( filepath ) );
+                        grunt.log.subhead( '  ' + filepath );
                         output.forEach( function( errorObject ){
+                            errorCount = errorCount + 1;
                             grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.gray( inputArray[ errorObject.line - 1 ] ) );
                             grunt.log.writeln( grunt.util.repeat( errorObject.column + 7, ' ' ) + '^ ' + errorObject.message );
                         });
 
                         grunt.log.writeln();
+                    } else {
+                        cleanFileCount = cleanFileCount + 1;
                     }
 
                     if( output.length > 0 && !force ){
@@ -60,6 +69,18 @@ module.exports = function( grunt ){
                 });
             } catch ( error ){
                 grunt.fail.fatal( error );
+            }
+
+            if( errorCount > 0 ){
+                response = 'Finished with ' + errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, ' file/ files' );
+
+                if( cleanFileCount > 0 ){
+                    response = response + ' and ' + cleanFileCount + grunt.util.pluralize( cleanFileCount, ' clean file./ clean files.' );
+                } else {
+                    response = response + '.';
+                }
+
+                grunt.log.warn( response );
             }
         });
     });

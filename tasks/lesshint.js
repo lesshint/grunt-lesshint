@@ -16,6 +16,7 @@ module.exports = function( grunt ){
         var options = this.options(),
             linter = new lesshint(),
             failOnError = true;
+            task = this;
 
         linter.configure( {
             "spaceAfterPropertyColon": {
@@ -46,15 +47,15 @@ module.exports = function( grunt ){
                         grunt.log.writeln();
                         grunt.log.writeln( '  ' + chalk.bold( filepath ) );
                         output.forEach( function( errorObject ){
-                            grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.dim( inputArray[ errorObject.line - 1 ] ) );
-                            grunt.log.writeln( new Array( errorObject.column + 8 ).join( ' ' ) + '^ ' + errorObject.message );
+                            grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.gray( inputArray[ errorObject.line - 1 ] ) );
+                            grunt.log.writeln( grunt.util.repeat( errorObject.column + 7, ' ' ) + '^ ' + errorObject.message );
                         });
 
                         grunt.log.writeln();
                     }
 
-                    if( output.length > 0 && failOnError ){
-                        grunt.fail.warn( 'Found ' + output.length + ' errors' );
+                    if( output.length > 0 && !force ){
+                        grunt.fail.warn( 'Task "' + task.name + '" failed.' );
                     }
                 });
             } catch ( error ){

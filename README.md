@@ -14,7 +14,7 @@ npm install grunt-lesshint --save-dev
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-lesshint');
+grunt.loadNpmTasks( 'grunt-lesshint' );
 ```
 
 ## The "lesshint" task
@@ -25,14 +25,14 @@ In your project's Gruntfile, add a section named `lesshint` to the data object p
 
 ```js
 grunt.initConfig({
-  lesshint: {
-    options: {
-      // Task-specific options go here.
+    lesshint: {
+        options: {
+            // Task-specific options go here.
+        },
+        your_target: {
+            // Target-specific file lists and/or options go here.
+        },
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
 });
 ```
 

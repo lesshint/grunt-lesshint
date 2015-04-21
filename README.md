@@ -49,4 +49,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-04-21|0.1.1|Readme fixes|
 |2015-04-21|0.1.0|Initial release|

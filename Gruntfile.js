@@ -47,7 +47,7 @@ module.exports = function( grunt ){
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-contrib-nodeunit' );
 
-    grunt.registerTask( 'test', [ 'lesshint', 'nodeunit' ] );
+    grunt.registerTask( 'test', [ 'nodeunit' ] );
 
     // By default, lint and run all tests.
     grunt.registerTask( 'default', [ 'jshint', 'test' ] );

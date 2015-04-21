@@ -15,7 +15,6 @@ module.exports = function( grunt ){
     grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
         var options = this.options(),
             linter = new lesshint(),
-            failOnError = true;
             task = this;
 
         linter.configure( {
@@ -63,7 +62,7 @@ module.exports = function( grunt ){
                         cleanFileCount = cleanFileCount + 1;
                     }
 
-                    if( output.length > 0 && !force ){
+                    if( output.length > 0 && !options.force ){
                         grunt.fail.warn( 'Task "' + task.name + '" failed.' );
                     }
                 });

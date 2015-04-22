@@ -17,7 +17,7 @@ exports.lesshint = {
             encoding: 'utf8'
         });
 
-        test.equal( response.status, 6, 'This assertion should exit with status code 6' );
+        test.equal( response.status, 6, 'This assertion should exit with status code 6 (Warning)' );
 
         test.done();
     },
@@ -45,7 +45,7 @@ exports.lesshint = {
             encoding: 'utf8'
         });
 
-        test.equal( response.status, 0, 'This assertion should succeed and exit with status code 0' );
+        test.equal( response.status, 0, 'This assertion should succeed and exit with status code 0 (No errors!)' );
 
         test.done();
     },

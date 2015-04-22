@@ -32,6 +32,11 @@ module.exports = function( grunt ){
                 files: {
                     src: [ 'test/fixtures/**/*.less' ]
                 }
+            },
+            no_errors: {
+                files: {
+                    src: [ 'test/fixtures/errorless.less' ]
+                }
             }
         },
 

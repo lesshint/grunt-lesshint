@@ -2,6 +2,9 @@
 
 > Lint lesscss files
 
+[![Dependency Status](https://david-dm.org/kokarn/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint)
+[![devDependency Status](https://david-dm.org/kokarn/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint#info=devDependencies)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -88,5 +91,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-04-22|0.1.2|<ul><li>Updated testfiles and tests</li><li>Update devDependencies</li></ul>|
 |2015-04-21|0.1.1|Readme fixes|
 |2015-04-21|0.1.0|Initial release|

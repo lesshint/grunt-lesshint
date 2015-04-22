@@ -17,6 +17,10 @@ module.exports = function( grunt ){
             linter = new lesshint(),
             task = this;
 
+        if( options.force ){
+            grunt.option( 'force', true );
+        }
+
         linter.configure( {
             "spaceAfterPropertyColon": {
                 "enabled": true,
@@ -62,7 +66,7 @@ module.exports = function( grunt ){
                         cleanFileCount = cleanFileCount + 1;
                     }
 
-                    if( output.length > 0 && !options.force ){
+                    if( output.length > 0 ){
                         grunt.fail.warn( 'Task "' + task.name + '" failed.' );
                     }
                 });
@@ -80,6 +84,8 @@ module.exports = function( grunt ){
                 }
 
                 grunt.log.warn( response );
+            } else {
+                grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + ' without linting errors.' );
             }
         });
     });

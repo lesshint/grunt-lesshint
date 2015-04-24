@@ -21,18 +21,6 @@ module.exports = function( grunt ){
             grunt.option( 'force', true );
         }
 
-        linter.configure( {
-            "spaceAfterPropertyColon": {
-                "enabled": true,
-                "style": "one_space"
-            },
-
-            "spaceBeforeBrace": {
-                "enabled": true,
-                "style": "one_space"
-            }
-        } );
-
         this.files.forEach( function( files ){
             var errorCount = 0,
                 errorFileCount = 0,

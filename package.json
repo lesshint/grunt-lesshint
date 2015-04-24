@@ -1,7 +1,7 @@
 {
   "name": "grunt-lesshint",
   "description": "Lint lesscss files with grunt",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/kokarn/grunt-lesshint",
   "author": {
     "name": "Oskar Risberg",
@@ -45,6 +45,6 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "lesshint": "^0.1.4"
+    "lesshint": "^0.1.5"
   }
 }

@@ -63,7 +63,7 @@ module.exports = function( grunt ){
             }
 
             if( errorCount > 0 ){
-                response = 'Finished with ' + errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, ' file/ files' );
+                response = 'Finished with' + errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, 'file/files' );
 
                 if( cleanFileCount > 0 ){
                     response = response + ' and ' + cleanFileCount + grunt.util.pluralize( cleanFileCount, ' clean file./ clean files.' );

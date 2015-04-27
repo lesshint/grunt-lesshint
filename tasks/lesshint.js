@@ -73,7 +73,7 @@ module.exports = function( grunt ){
 
                 grunt.log.warn( response );
             } else {
-                grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + ' without linting errors.' );
+                grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + 'without linting errors.' );
             }
         });
     });

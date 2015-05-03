@@ -37,6 +37,15 @@ module.exports = function( grunt ){
                 files: {
                     src: [ 'test/fixtures/errorless.less' ]
                 }
+            },
+            custom_options: {
+                options: {
+                    spaceAfterPropertyColon: 'no_space',
+                    spaceBeforeBrace: 'no_space'
+                },
+                files: {
+                    src: [ 'test/fixtures/errors.less' ]
+                }
             }
         },
 

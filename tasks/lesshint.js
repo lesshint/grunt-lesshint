@@ -19,7 +19,10 @@ module.exports = function( grunt ){
 
         if( options.force ){
             grunt.option( 'force', true );
+            delete options.force;
         }
+
+        linter.configure( options );
 
         this.files.forEach( function( files ){
             var errorCount = 0,

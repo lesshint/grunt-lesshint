@@ -52,6 +52,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-03|0.2.0|Add support for passing options to lesshint|
 |2015-05-03|0.1.6|Update lesshint to 0.3.1|
 |2015-05-03|0.1.5|Update lesshint to 0.3.0|
 |2015-04-27|0.1.4|<ul><li>Update lesshint to 0.2.0</li><li>Fix duplicate whitespace</li></ul>|

@@ -35,6 +35,20 @@ exports.lesshint = {
 
         test.done();
     },
+    customOptionsNoErrors: function( test ){
+        test.expect( 1 );
+
+        // task: lesshint:custom_options
+        // should succeed without warnings
+
+        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:custom_options' ], {
+            encoding: 'utf8'
+        });
+
+        test.equal( response.status, 0, 'This assertion should succeed and exit with status code 0 (No errors!)' );
+
+        test.done();
+    },
     withForce: function( test ){
         test.expect( 1 );
 

@@ -8,7 +8,7 @@
 
 'use strict';
 
-var lesshint = require( 'LessHint' ),
+var lesshint = require( 'Lesshint' ),
     chalk = require( 'chalk' );
 
 module.exports = function( grunt ){

@@ -56,10 +56,6 @@ module.exports = function( grunt ){
                     } else {
                         cleanFileCount = cleanFileCount + 1;
                     }
-
-                    if( output.length > 0 ){
-                        grunt.fail.warn( 'Task "' + task.name + '" failed.' );
-                    }
                 });
             } catch ( error ){
                 grunt.fail.fatal( error );
@@ -75,6 +71,7 @@ module.exports = function( grunt ){
                 }
 
                 grunt.log.warn( response );
+                grunt.fail.warn( 'Task "' + task.name + '" failed.' );
             } else {
                 grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + 'without linting errors.' );
             }

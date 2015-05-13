@@ -92,7 +92,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 |Date|Version|Changes|
 |---|---|---|
 |2015-05-11|0.2.3|Update lesshint to 0.4.1|
-|2015-05-11|0.2.2|<ul><li>Use ´´´Lesshint´´´ instead of ´´´LessHint´´´</li><li>Don't faile the linter after every file with errors</li></ul>|
+|2015-05-11|0.2.2|<ul><li>Use <code>Lesshint</code> instead of <code>LessHint</code></li><li>Don't faile the linter after every file with errors</li></ul>|
 |2015-05-11|0.2.1|Update lesshint to 0.4.0|
 |2015-05-03|0.2.0|Add support for passing options to lesshint|
 |2015-05-03|0.1.6|Update lesshint to 0.3.1|

@@ -52,6 +52,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-18|0.2.5|Update lesshint to 0.5.0|
 |2015-05-11|0.2.3|Update lesshint to 0.4.1|
 |2015-05-11|0.2.2|<ul><li>Use <code>Lesshint</code> instead of <code>LessHint</code></li><li>Don't fail the linter after every file with errors</li></ul>|
 |2015-05-11|0.2.1|Update lesshint to 0.4.0|

@@ -44,6 +44,6 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "lesshint": "^0.4.1"
+    "lesshint": "^0.5.0"
   }
 }

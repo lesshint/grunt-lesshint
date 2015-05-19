@@ -52,6 +52,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-19|0.2.7|Update lesshint to 0.5.1|
 |2015-05-18|0.2.6|Fix NPM publish|
 |2015-05-18|0.2.5|Update lesshint to 0.5.0|
 |2015-05-11|0.2.3|Update lesshint to 0.4.1|

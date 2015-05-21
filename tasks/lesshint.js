@@ -15,12 +15,7 @@ module.exports = function( grunt ){
     grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
         var options = this.options(),
             linter = new lesshint(),
-            task = this;
-
-        if( options.force ){
-            grunt.option( 'force', true );
-            delete options.force;
-        }
+            success = true;
 
         linter.configure( options );
 
@@ -62,7 +57,7 @@ module.exports = function( grunt ){
             }
 
             if( errorCount > 0 ){
-                response = 'Finished with ' + errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, ' file/ files' );
+                response = errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, ' file/ files' );
 
                 if( cleanFileCount > 0 ){
                     response = response + ' and ' + cleanFileCount + grunt.util.pluralize( cleanFileCount, ' clean file./ clean files.' );
@@ -71,10 +66,17 @@ module.exports = function( grunt ){
                 }
 
                 grunt.log.warn( response );
-                grunt.fail.warn( 'Task "' + task.name + '" failed.' );
+
+                success = false;
             } else {
                 grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + 'without linting errors.' );
             }
         });
+
+        if( options.force ){
+            success = true;
+        }
+
+        return success;
     });
 };

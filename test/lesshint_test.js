@@ -10,13 +10,13 @@ exports.lesshint = {
         test.expect( 1 );
 
         // task: lesshint
-        // should fail with warnings
+        // should fail
 
         var response = childProcess.spawnSync( 'grunt', [ 'lesshint' ], {
             encoding: 'utf8'
         });
 
-        test.equal( response.status, 6, 'This assertion should exit with status code 6 (Warning)' );
+        test.equal( response.status, 3, 'This assertion should exit with status code 3 (Task error)' );
 
         test.done();
     },

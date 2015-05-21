@@ -15,7 +15,6 @@ module.exports = function( grunt ){
     grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
         var options = this.options(),
             linter = new lesshint(),
-            task = this;
 
         if( options.force ){
             grunt.option( 'force', true );

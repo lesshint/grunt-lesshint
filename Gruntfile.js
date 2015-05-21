@@ -6,9 +6,8 @@
 * Licensed under the MIT license.
 */
 
-'use strict';
-
 module.exports = function( grunt ){
+    'use strict';
     grunt.initConfig({
         jshint: {
             all: [
@@ -25,7 +24,7 @@ module.exports = function( grunt ){
             files: {
                 src: [ 'test/fixtures/**/*.less' ]
             },
-            use_force: {
+            useForce: {
                 options: {
                     force: true
                 },
@@ -33,12 +32,12 @@ module.exports = function( grunt ){
                     src: [ 'test/fixtures/**/*.less' ]
                 }
             },
-            no_errors: {
+            noErrors: {
                 files: {
                     src: [ 'test/fixtures/errorless.less' ]
                 }
             },
-            custom_options: {
+            customOptions: {
                 options: {
                     spaceAfterPropertyColon: 'no_space',
                     spaceBeforeBrace: 'no_space'

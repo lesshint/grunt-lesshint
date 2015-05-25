@@ -70,6 +70,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-25|0.5.1|Fix readme and version for 0.5.0|
+|2015-05-25|0.5.0|Add CI support with Travis-ci and some experimental coveralls.io support|
 |2015-05-25|0.4.0|Add support for using custom ```.lesshintrc``` files|
 |2015-05-21|0.3.1|Forgot to update everything for the 0.3.0 release....|
 |2015-05-21|0.3.0|<ul><li>Use a real force system instead of faking the <code>--force</code> grunt parameter</li><li>Update JSHint options and clean up errors</li></ul>|

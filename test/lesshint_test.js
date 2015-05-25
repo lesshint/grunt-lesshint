@@ -1,6 +1,6 @@
 'use strict';
 
-var childProcess = require( 'child_process' );
+var spawnSync = require( 'spawn-sync' );
 
 exports.lesshint = {
     setUp: function( done ){
@@ -12,7 +12,7 @@ exports.lesshint = {
         // task: lesshint
         // should fail
 
-        var response = childProcess.spawnSync( 'grunt', [ 'lesshint' ], {
+        var response = spawnSync( 'grunt', [ 'lesshint' ], {
             encoding: 'utf8'
         });
 
@@ -26,7 +26,7 @@ exports.lesshint = {
         // task: lesshint:noErrors
         // should succeed without warnings
 
-        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:noErrors' ], {
+        var response = spawnSync( 'grunt', [ 'lesshint:noErrors' ], {
             encoding: 'utf8'
         });
 
@@ -40,7 +40,7 @@ exports.lesshint = {
         // task: lesshint:customOptions
         // should succeed without warnings
 
-        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:customOptions' ], {
+        var response = spawnSync( 'grunt', [ 'lesshint:customOptions' ], {
             encoding: 'utf8'
         });
 
@@ -54,7 +54,7 @@ exports.lesshint = {
         // task: lesshint:useLesshintRc
         // should succeed without warnings
 
-        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:useLesshintRc' ], {
+        var response = spawnSync( 'grunt', [ 'lesshint:useLesshintRc' ], {
             encoding: 'utf8'
         });
 
@@ -68,7 +68,7 @@ exports.lesshint = {
         // task: lesshint:useForce
         // should succeed with warnings
 
-        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:useForce' ], {
+        var response = spawnSync( 'grunt', [ 'lesshint:useForce' ], {
             encoding: 'utf8'
         });
 

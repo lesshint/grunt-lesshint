@@ -11,7 +11,32 @@ module.exports = function( grunt ){
     grunt.initConfig({
         jshint: {
             options: {
-                jshintrc: '.jshintrc'
+                "bitwise": true,
+                "browser": true,
+                "boss": true,
+                "camelcase": true,
+                "curly": true,
+                "es3": true,
+                "eqeqeq": true,
+                "eqnull": true,
+                "forin": true,
+                "freeze": true,
+                "immed": true,
+                "indent": 4,
+                "jquery": true,
+                "newcap": true,
+                "noarg": true,
+                "node": true,
+                "nonbsp": true,
+                "noempty": true,
+                "nonew": true,
+                "passfail": true,
+                "plusplus": true,
+                "undef": true,
+                "unused": true,
+                "strict": true,
+                "sub": true,
+                "trailing": true
             },
             all: [
                 'Gruntfile.js',
@@ -56,9 +81,10 @@ module.exports = function( grunt ){
             }
         },
 
-        // Unit tests.
-        nodeunit: {
-            tests: [ 'test/*_test.js' ]
+        mochaTest: {
+            files: {
+                src: [ 'test/**/*.js' ]
+            }
         }
 
     });
@@ -66,9 +92,9 @@ module.exports = function( grunt ){
     grunt.loadTasks( 'tasks' );
 
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-contrib-nodeunit' );
+    grunt.loadNpmTasks( 'grunt-mocha-test' );
 
-    grunt.registerTask( 'test', [ 'nodeunit' ] );
+    grunt.registerTask( 'test', [ 'mochaTest' ] );
 
     // By default, lint and run all tests.
     grunt.registerTask( 'default', [ 'jshint', 'test' ] );

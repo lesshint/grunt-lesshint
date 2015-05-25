@@ -41,10 +41,26 @@ grunt.initConfig({
 ## Options
 
 #### force
-Type: `Boolean`
+Type: `Boolean`  
 Default value: `false`
 
 Set `force` to `true` to report lesshint errors but not fail the task.
+
+#### lesshintrc
+
+Type: `String` or `true`  
+Default: `null`
+
+If set to `true`, no config will be sent to lesshint and lesshint will search for `.lesshintrc` files relative to the files being linted.
+
+If a filename is specified, options and globals defined therein will be used. The `lesshintrc` file must be valid JSON and looks something like this:
+
+```json
+{
+    "spaceAfterPropertyColon": "no_space",
+    "spaceBeforeBrace": "no_space"
+}
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
@@ -52,6 +68,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-25|0.4.0|Add support for using custom ```.lesshintrc``` files|
 |2015-05-21|0.3.1|Forgot to update everything for the 0.3.0 release....|
 |2015-05-21|0.3.0|<ul><li>Use a real force system instead of faking the <code>--force</code> grunt parameter</li><li>Update JSHint options and clean up errors</li></ul>|
 |2015-05-19|0.2.7|Update lesshint to 0.5.1|

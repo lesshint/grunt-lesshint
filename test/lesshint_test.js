@@ -23,7 +23,7 @@ exports.lesshint = {
     defaultOptionsNoErrors: function( test ){
         test.expect( 1 );
 
-        // task: lesshint:no_errors
+        // task: lesshint:noErrors
         // should succeed without warnings
 
         var response = childProcess.spawnSync( 'grunt', [ 'lesshint:noErrors' ], {
@@ -37,7 +37,7 @@ exports.lesshint = {
     customOptionsNoErrors: function( test ){
         test.expect( 1 );
 
-        // task: lesshint:custom_options
+        // task: lesshint:customOptions
         // should succeed without warnings
 
         var response = childProcess.spawnSync( 'grunt', [ 'lesshint:customOptions' ], {
@@ -48,10 +48,24 @@ exports.lesshint = {
 
         test.done();
     },
+    lesshintRcNoErrors: function( test ){
+        test.expect( 1 );
+
+        // task: lesshint:useLesshintRc
+        // should succeed without warnings
+
+        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:useLesshintRc' ], {
+            encoding: 'utf8'
+        });
+
+        test.equal( response.status, 0, 'This assertion should succeed and exit with status code 0 (No errors!)' );
+
+        test.done();
+    },
     withForce: function( test ){
         test.expect( 1 );
 
-        // task: lesshint:use_force
+        // task: lesshint:useForce
         // should succeed with warnings
 
         var response = childProcess.spawnSync( 'grunt', [ 'lesshint:useForce' ], {

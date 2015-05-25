@@ -41,7 +41,7 @@ grunt.initConfig({
 ## Options
 
 #### force
-Type: `Boolean`
+Type: `Boolean`  
 Default value: `false`
 
 Set `force` to `true` to report lesshint errors but not fail the task.

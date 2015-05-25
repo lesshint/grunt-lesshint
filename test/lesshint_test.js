@@ -48,6 +48,20 @@ exports.lesshint = {
 
         test.done();
     },
+    lesshintRcNoErrors: function( test ){
+        test.expect( 1 );
+
+        // task: lesshint:useLesshintRc
+        // should succeed without warnings
+
+        var response = childProcess.spawnSync( 'grunt', [ 'lesshint:useLesshintRc' ], {
+            encoding: 'utf8'
+        });
+
+        test.equal( response.status, 0, 'This assertion should succeed and exit with status code 0 (No errors!)' );
+
+        test.done();
+    },
     withForce: function( test ){
         test.expect( 1 );
 

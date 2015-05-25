@@ -45,6 +45,14 @@ module.exports = function( grunt ){
                 files: {
                     src: [ 'test/fixtures/errors.less' ]
                 }
+            },
+            useLesshintRc: {
+                options: {
+                    lesshintrc : 'test/.lesshintrc'
+                },
+                files: {
+                    src: [ 'test/fixtures/errors.less' ]
+                }
             }
         },
 

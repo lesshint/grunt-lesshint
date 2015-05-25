@@ -9,15 +9,29 @@
 'use strict';
 
 var lesshint = require( 'Lesshint' ),
-    chalk = require( 'chalk' );
+    chalk = require( 'chalk' ),
+    configLoader = require( 'lesshint/lib/config-loader' );
 
 module.exports = function( grunt ){
     grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
         var options = this.options(),
             linter = new lesshint(),
-            success = true;
+            success = true,
+            config;
 
-        linter.configure( options );
+        if( options.lesshintrc === true ){
+            // let lesshinthint find the options itself
+            config = configLoader();
+        } else if( options.lesshintrc ){
+            // Read Lesshint options from a specified .lesshintrc file.
+            config = configLoader( options.lesshintrc );
+        } else {
+            config = options;
+        }
+
+        if( config ){
+            linter.configure( config );
+        }
 
         this.files.forEach( function( files ){
             var errorCount = 0,

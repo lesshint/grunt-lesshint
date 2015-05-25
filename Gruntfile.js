@@ -12,12 +12,12 @@ module.exports = function( grunt ){
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
-            }
+            },
             all: [
                 'Gruntfile.js',
                 'tasks/*.js',
                 '<%= nodeunit.tests %>'
-            ],
+            ]
         },
 
         lesshint: {

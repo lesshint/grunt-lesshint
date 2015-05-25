@@ -99,6 +99,14 @@ module.exports = function( grunt ){
                 files: {
                     src: [ 'test/**/*.js' ]
                 }
+            },
+            coverage: {
+                options: {
+                    coveralls: true
+                },
+                files: {
+                    src: [ 'test/**/*.js' ]
+                }
             }
         }
 
@@ -110,6 +118,7 @@ module.exports = function( grunt ){
     grunt.loadNpmTasks( 'grunt-mocha-cov' );
 
     grunt.registerTask( 'test', [ 'mochacov:test' ] );
+    grunt.registerTask( 'cover', [ 'mochacov:coverage' ] );
 
     // By default, lint and run all tests.
     grunt.registerTask( 'default', [ 'jshint', 'test' ] );

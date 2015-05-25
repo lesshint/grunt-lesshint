@@ -19,9 +19,11 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "grunt cover"
   },
   "devDependencies": {
+    "blanket": "^1.1.7",
     "grunt": "~0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.11.2",
@@ -43,5 +45,12 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "lesshint": "^0.5.1"
-  }
+    },
+    "config": {
+      "blanket": {
+        "pattern": [
+          "tasks"
+        ]
+      }
+    }
 }

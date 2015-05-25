@@ -16,3 +16,7 @@ script:
 
 matrix:
   fast_finish: true
+
+notifications:
+  email:
+    on_failure: change

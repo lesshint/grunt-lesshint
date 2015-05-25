@@ -41,7 +41,7 @@ grunt.initConfig({
 ## Options
 
 #### force
-Type: `Boolean`
+Type: `Boolean`  
 Default value: `false`
 
 Set `force` to `true` to report lesshint errors but not fail the task.
@@ -68,6 +68,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-05-25|0.4.0|Add support for using custom ```.lesshintrc``` files|
 |2015-05-21|0.3.1|Forgot to update everything for the 0.3.0 release....|
 |2015-05-21|0.3.0|<ul><li>Use a real force system instead of faking the <code>--force</code> grunt parameter</li><li>Update JSHint options and clean up errors</li></ul>|
 |2015-05-19|0.2.7|Update lesshint to 0.5.1|

@@ -40,9 +40,19 @@ module.exports = function( grunt ){
             },
             all: [
                 'Gruntfile.js',
-                'tasks/*.js',
-                '<%= nodeunit.tests %>'
-            ]
+                'tasks/*.js'
+            ],
+            tests: {
+                options: {
+                    globals: {
+                        "describe": true,
+                        "it": true
+                    }
+                },
+                files: {
+                    src: [ 'test/*.js' ]
+                }
+            }
         },
 
         lesshint: {

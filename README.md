@@ -4,6 +4,7 @@
 
 [![Dependency Status](https://david-dm.org/kokarn/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint)
 [![devDependency Status](https://david-dm.org/kokarn/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint#info=devDependencies)
+[![Build Status](https://travis-ci.org/kokarn/grunt-lesshint.svg)](https://travis-ci.org/kokarn/grunt-lesshint)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`

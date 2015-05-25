@@ -20,7 +20,7 @@ module.exports = function( grunt ){
             config;
 
         if( options.lesshintrc === true ){
-            // let lesshinthint find the options itself
+            // let lesshint find the options itself
             config = configLoader();
         } else if( options.lesshintrc ){
             // Read Lesshint options from a specified .lesshintrc file.

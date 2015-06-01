@@ -70,6 +70,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-61-01|0.6.1|Update lesshint to 0.6.2|
 |2015-05-28|0.6.0|Update lesshint to 0.6.1|
 |2015-05-25|0.5.1|Fix readme and version for 0.5.0|
 |2015-05-25|0.5.0|Add CI support with Travis-ci and some experimental coveralls.io support|

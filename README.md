@@ -2,10 +2,10 @@
 
 > Lint LESSCSS files with grunt
 
-[![Dependency Status](https://david-dm.org/kokarn/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint)
-[![devDependency Status](https://david-dm.org/kokarn/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint#info=devDependencies)
-[![Build Status](https://travis-ci.org/kokarn/grunt-lesshint.svg)](https://travis-ci.org/kokarn/grunt-lesshint)
-[![Coverage Status](https://coveralls.io/repos/kokarn/grunt-lesshint/badge.svg)](https://coveralls.io/r/kokarn/grunt-lesshint)
+[![Dependency Status](https://david-dm.org/lesshint/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/lesshint/grunt-lesshint)
+[![devDependency Status](https://david-dm.org/lesshint/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/lesshint/grunt-lesshint#info=devDependencies)
+[![Build Status](https://travis-ci.org/lesshint/grunt-lesshint.svg)](https://travis-ci.org/lesshint/grunt-lesshint)
+[![Coverage Status](https://coveralls.io/repos/lesshint/grunt-lesshint/badge.svg)](https://coveralls.io/r/lesshint/grunt-lesshint)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`

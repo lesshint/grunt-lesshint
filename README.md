@@ -70,6 +70,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-06-25|0.7.0|<ul><li>Update lesshint to 0.7.0</li><li>Move grunt-lesshint to it's new home</li></ul>|
 |2015-06-28|0.6.1|Update lesshint to 0.6.2|
 |2015-05-28|0.6.0|Update lesshint to 0.6.1|
 |2015-05-25|0.5.1|Fix readme and version for 0.5.0|

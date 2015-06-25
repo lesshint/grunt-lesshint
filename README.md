@@ -2,10 +2,10 @@
 
 > Lint LESSCSS files with grunt
 
-[![Dependency Status](https://david-dm.org/kokarn/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint)
-[![devDependency Status](https://david-dm.org/kokarn/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/kokarn/grunt-lesshint#info=devDependencies)
-[![Build Status](https://travis-ci.org/kokarn/grunt-lesshint.svg)](https://travis-ci.org/kokarn/grunt-lesshint)
-[![Coverage Status](https://coveralls.io/repos/kokarn/grunt-lesshint/badge.svg)](https://coveralls.io/r/kokarn/grunt-lesshint)
+[![Dependency Status](https://david-dm.org/lesshint/grunt-lesshint.svg?theme=shields.io&style=flat)](https://david-dm.org/lesshint/grunt-lesshint)
+[![devDependency Status](https://david-dm.org/lesshint/grunt-lesshint/dev-status.svg?theme=shields.io&style=flat)](https://david-dm.org/lesshint/grunt-lesshint#info=devDependencies)
+[![Build Status](https://travis-ci.org/lesshint/grunt-lesshint.svg)](https://travis-ci.org/lesshint/grunt-lesshint)
+[![Coverage Status](https://coveralls.io/repos/lesshint/grunt-lesshint/badge.svg)](https://coveralls.io/r/lesshint/grunt-lesshint)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -70,7 +70,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
-|2015-61-01|0.6.1|Update lesshint to 0.6.2|
+|2015-06-25|0.7.0|<ul><li>Update lesshint to 0.7.0</li><li>Move grunt-lesshint to it's new home</li></ul>|
+|2015-06-28|0.6.1|Update lesshint to 0.6.2|
 |2015-05-28|0.6.0|Update lesshint to 0.6.1|
 |2015-05-25|0.5.1|Fix readme and version for 0.5.0|
 |2015-05-25|0.5.0|Add CI support with Travis-ci and some experimental coveralls.io support|

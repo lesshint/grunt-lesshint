@@ -1,6 +1,6 @@
 /*
 * grunt-lesshint
-* https://github.com/kokarn/grunt-lesshint
+* https://github.com/lesshint/grunt-lesshint
 *
 * Copyright (c) 2015 Oskar Risberg
 * Licensed under the MIT license.

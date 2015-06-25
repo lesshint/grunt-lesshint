@@ -1,18 +1,18 @@
 {
   "name": "grunt-lesshint",
   "description": "Lint lesscss files with grunt",
-  "version": "0.6.1",
-  "homepage": "https://github.com/kokarn/grunt-lesshint",
+  "version": "0.7.0",
+  "homepage": "https://github.com/lesshint/grunt-lesshint",
   "author": {
     "name": "Oskar Risberg",
     "email": "kokarn@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kokarn/grunt-lesshint.git"
+    "url": "https://github.com/lesshint/grunt-lesshint.git"
   },
   "bugs": {
-    "url": "https://github.com/kokarn/grunt-lesshint/issues"
+    "url": "https://github.com/lesshint/grunt-lesshint/issues"
   },
   "license": "MIT",
   "engines": {
@@ -44,7 +44,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "lesshint": "^0.6.2"
+    "lesshint": "^0.7.0"
     },
     "config": {
       "blanket": {

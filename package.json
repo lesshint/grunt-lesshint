@@ -29,7 +29,7 @@
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-mocha-cov": "^0.4.0",
     "mocha": "^2.2.5",
-    "spawn-sync": "^1.0.11"
+    "spawn-sync": "^1.0.13"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"

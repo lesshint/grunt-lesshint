@@ -1,7 +1,7 @@
 {
   "name": "grunt-lesshint",
   "description": "Lint lesscss files with grunt",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "homepage": "https://github.com/lesshint/grunt-lesshint",
   "author": {
     "name": "Oskar Risberg",
@@ -29,7 +29,7 @@
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-mocha-cov": "^0.4.0",
     "mocha": "^2.2.5",
-    "spawn-sync": "^1.0.11"
+    "spawn-sync": "^1.0.13"
   },
   "peerDependencies": {
     "grunt": "~0.4.5"
@@ -43,8 +43,8 @@
     "linting"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "lesshint": "^0.7.0"
+    "chalk": "^1.1.1",
+    "lesshint": "^0.8.0"
     },
     "config": {
       "blanket": {

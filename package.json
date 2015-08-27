@@ -43,8 +43,8 @@
     "linting"
   ],
   "dependencies": {
-    "lesshint": "^0.7.0"
     "chalk": "^1.1.1",
+    "lesshint": "^0.8.0"
     },
     "config": {
       "blanket": {

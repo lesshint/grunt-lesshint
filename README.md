@@ -70,6 +70,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-09-01|0.9.1|Fix readme and version for 0.9.0 and 0.9.1|
+|2015-09-01|0.9.0|<ul><li>Update lesshint to 0.8.0</li><li>Update mocha to 2.3.0</li></ul>|
 |2015-08-27|0.8.0|<ul><li>Update lesshint to 0.8.0</li><li>Update spawn-sync to 1.0.11</li><li>Update chalk to 1.1.1</li></ul>|
 |2015-06-25|0.7.0|<ul><li>Update lesshint to 0.7.0</li><li>Move grunt-lesshint to it's new home</li></ul>|
 |2015-06-28|0.6.1|Update lesshint to 0.6.2|

@@ -44,7 +44,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.1",
-    "lesshint": "^0.9.0"
+    "lesshint": "~0.9.0"
     },
     "config": {
       "blanket": {

@@ -70,6 +70,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2015-09-08|1.0.0|Switch lesshint dependency from ^ to ~ because of the [Caret: Major Zero](https://nodesource.com/blog/semver-tilde-and-caret) issue. *Note: Bumping to 1.0.0 to avoid the issue for this repo*|
 |2015-09-01|0.9.1|Fix readme and version for 0.9.0 and 0.9.1|
 |2015-09-01|0.9.0|<ul><li>Update lesshint to 0.8.0</li><li>Update mocha to 2.3.0</li></ul>|
 |2015-08-27|0.8.0|<ul><li>Update lesshint to 0.8.0</li><li>Update spawn-sync to 1.0.11</li><li>Update chalk to 1.1.1</li></ul>|

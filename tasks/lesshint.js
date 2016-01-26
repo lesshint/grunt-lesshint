@@ -8,14 +8,14 @@
 
 'use strict';
 
-var lesshint = require( 'lesshint' ),
+var Lesshint = require( 'lesshint' ),
     chalk = require( 'chalk' ),
     configLoader = require( 'lesshint/lib/config-loader' );
 
 module.exports = function( grunt ){
     grunt.registerMultiTask( 'lesshint', 'Lint lesscss files', function(){
         var options = this.options(),
-            linter = new lesshint(),
+            linter = new Lesshint(),
             success = true,
             config;
 

@@ -46,7 +46,7 @@ module.exports = function( grunt ){
             try {
                 files.src.forEach( function( filepath ){
                     var input = grunt.file.read( filepath ),
-                        output = linter.checkString( input ),
+                        output = linter.checkString( input, '' ),
                         inputArray;
 
                     if( output.length > 0 ){

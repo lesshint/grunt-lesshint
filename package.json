@@ -20,19 +20,15 @@
   },
   "scripts": {
     "test": "mocha",
-    "cover": "grunt cover"
+    "cover": "grunt cover",
+    "grunt": "grunt"
   },
   "devDependencies": {
     "blanket": "^1.1.7",
-    "grunt": "~0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-mocha-cov": "^0.4.0",
-    "mocha": "^2.3.3",
+    "mocha": "^3.0.2",
     "spawn-sync": "^1.0.13"
-  },
-  "peerDependencies": {
-    "grunt": ">=0.4.0"
   },
   "keywords": [
     "gruntplugin",
@@ -43,8 +39,9 @@
     "linting"
   ],
   "dependencies": {
+    "grunt": "^1.0.1",
     "chalk": "^1.1.1",
-    "lesshint": "^1.0.0"
+    "lesshint": "^2.0.0"
   },
   "config": {
     "blanket": {

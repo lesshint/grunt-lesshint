@@ -1,12 +1,15 @@
 'use strict';
 
+var path = require( 'path' );
+
 var assert = require( 'assert' );
 
 describe( 'grunt-lesshint', function(){
     var spawnSync = require( 'spawn-sync' );
+    var gruntPath = path.join( __dirname + '/../node_modules/grunt/bin/grunt' );
 
     describe( 'defaultOptions', function(){
-        var response = spawnSync( 'grunt', [ 'lesshint' ], {
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint' ], {
             encoding: 'utf8'
         });
 
@@ -16,7 +19,7 @@ describe( 'grunt-lesshint', function(){
     });
 
     describe( 'defaultOptionsNoErrors', function(){
-        var response = spawnSync( 'grunt', [ 'lesshint:noErrors' ], {
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:noErrors' ], {
             encoding: 'utf8'
         });
 
@@ -26,7 +29,7 @@ describe( 'grunt-lesshint', function(){
     });
 
     describe( 'customOptionsNoErrors', function(){
-        var response = spawnSync( 'grunt', [ 'lesshint:customOptions' ], {
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:customOptions' ], {
             encoding: 'utf8'
         });
 
@@ -36,7 +39,7 @@ describe( 'grunt-lesshint', function(){
     });
 
     describe( 'lesshintRcNoErrors', function(){
-        var response = spawnSync( 'grunt', [ 'lesshint:useLesshintRc' ], {
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:useLesshintRc' ], {
             encoding: 'utf8'
         });
 
@@ -46,7 +49,7 @@ describe( 'grunt-lesshint', function(){
     });
 
     describe( 'withForce', function(){
-        var response = spawnSync( 'grunt', [ 'lesshint:useForce' ], {
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:useForce' ], {
             encoding: 'utf8'
         });
 

@@ -19,15 +19,12 @@
     "node": ">= 4.0.0"
   },
   "scripts": {
-    "test": "mocha",
-    "cover": "grunt cover",
+    "test": "grunt test",
     "grunt": "grunt"
   },
   "devDependencies": {
-    "blanket": "^1.1.7",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-mocha-cov": "^0.4.0",
-    "mocha": "^3.0.2",
+    "grunt-mocha-test": "^0.12.7",
     "spawn-sync": "^1.0.13"
   },
   "keywords": [
@@ -42,12 +39,5 @@
     "grunt": "^1.0.1",
     "chalk": "^1.1.1",
     "lesshint": "^2.0.0"
-  },
-  "config": {
-    "blanket": {
-      "pattern": [
-        "tasks"
-      ]
-    }
   }
 }

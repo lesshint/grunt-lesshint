@@ -91,18 +91,10 @@ module.exports = function( grunt ){
             }
         },
 
-        mochacov: {
+        mochaTest: {
             test: {
                 options: {
                     reporter: 'spec'
-                },
-                files: {
-                    src: [ 'test/**/*.js' ]
-                }
-            },
-            coverage: {
-                options: {
-                    coveralls: true
                 },
                 files: {
                     src: [ 'test/**/*.js' ]
@@ -115,10 +107,9 @@ module.exports = function( grunt ){
     grunt.loadTasks( 'tasks' );
 
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-mocha-cov' );
+    grunt.loadNpmTasks( 'grunt-mocha-test' );
 
-    grunt.registerTask( 'test', [ 'mochacov:test' ] );
-    grunt.registerTask( 'cover', [ 'mochacov:coverage' ] );
+    grunt.registerTask( 'test', [ 'mochaTest' ] );
 
     // By default, lint and run all tests.
     grunt.registerTask( 'default', [ 'jshint', 'test' ] );

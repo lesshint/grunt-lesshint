@@ -47,6 +47,36 @@ Default value: `false`
 
 Set `force` to `true` to report lesshint errors but not fail the task.
 
+#### reporter
+Type: `Object`
+
+Refer to the lesshint docs for more examples: https://github.com/lesshint/lesshint#writing-your-own-reporter
+Define your own custom reporter:
+
+```javascript
+options {
+    reporter: {
+        name: "foo-reporter", // optional but recommended
+        report: function(errors) {
+            errors.forEach(function(error) {
+                console.log(error);
+                // error object looks like:
+                // {
+                //     column: 5,
+                //     file: 'file.less',
+                //     fullPath: 'path/to/file.less',
+                //     line: 1,
+                //     linter: 'spaceBeforeBrace',
+                //     message: 'Opening curly brace should be preceded by one space.',
+                //     severity: 'warning',
+                //     source: '.foo{'
+                // }
+            });
+        }
+    }
+}
+```
+
 #### lesshintrc
 
 Type: `String` or `true`  

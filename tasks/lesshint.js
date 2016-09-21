@@ -46,22 +46,29 @@ module.exports = function( grunt ){
             try {
                 files.src.forEach( function( filepath ){
                     var input = grunt.file.read( filepath ),
-                        output = linter.checkString( input, '' ),
+                        output = linter.checkString( input, filepath ),
                         inputArray;
 
-                    if( output.length > 0 ){
-                        errorFileCount = errorFileCount + 1;
-                        inputArray = input.toString().split( '\n' );
+                    if( output.length > 0 ) {
+                        if (options.reporter && options.reporter.report) {
+                            // use custom reporter if there
+                            options.reporter.report(output);
+                        } else {
+                            // use built in reporter
+                            errorFileCount = errorFileCount + 1;
+                            inputArray = input.toString().split( '\n' );
 
-                        grunt.log.writeln();
-                        grunt.log.subhead( '  ' + filepath );
-                        output.forEach( function( errorObject ){
-                            errorCount = errorCount + 1;
-                            grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.gray( inputArray[ errorObject.line - 1 ] ) );
-                            grunt.log.writeln( grunt.util.repeat( errorObject.column + 7, ' ' ) + '^ ' + errorObject.message );
-                        });
+                            grunt.log.writeln();
+                            grunt.log.subhead( '  ' + filepath );
+                            output.forEach( function( errorObject ){
+                                errorCount = errorCount + 1;
+                                grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.gray( inputArray[ errorObject.line - 1 ] ) );
+                                grunt.log.writeln( grunt.util.repeat( errorObject.column + 7, ' ' ) + '^ ' + errorObject.message );
+                            });
 
-                        grunt.log.writeln();
+                            grunt.log.writeln();
+                        }
+
                     } else {
                         cleanFileCount = cleanFileCount + 1;
                     }

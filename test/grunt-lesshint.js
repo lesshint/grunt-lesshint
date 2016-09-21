@@ -64,6 +64,7 @@ describe( 'grunt-lesshint', function(){
         });
 
         it( 'This assertion should use custom reporter to log error', function() {
+            assert.equal( response.status, 3 );
             assert(response.stdout.indexOf("custom spaceBeforeBrace") >= 0);
             assert(response.stdout.indexOf("custom spaceAfterPropertyColon") >= 0);
         });

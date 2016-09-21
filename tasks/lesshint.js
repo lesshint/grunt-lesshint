@@ -53,6 +53,8 @@ module.exports = function( grunt ){
                         if (options.reporter && options.reporter.report) {
                             // use custom reporter if there
                             options.reporter.report(output);
+                            errorFileCount += 1;
+                            errorCount += output.length;
                         } else {
                             // use built in reporter
                             errorFileCount = errorFileCount + 1;

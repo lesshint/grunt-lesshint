@@ -99,6 +99,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2016-09-22|1.3.0|Added support for custom reporters. Thanks [@scttdavs](https://github.com/scttdavs)!|
 |2016-09-05|1.2.0|<ul><li>Update grunt to 1.0.0</li><li>Update lesshint to 2.0.0</li><li>Added node 6.* to Travis</li></ul>|
 |2016-01-26|1.1.1|Update grunt-contrib-jshint to 0.12.0|
 |2015-10-20|1.1.0|<ul><li>Update lesshint to 1.0.0</li><li>Switch lesshint back to ^ to ~</li><li>Update mocha to 2.3.3</li><li>Update grunt-contrib-jshint to 0.11.3</li></ul>|

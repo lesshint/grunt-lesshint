@@ -88,6 +88,21 @@ module.exports = function( grunt ){
                 files: {
                     src: [ 'test/fixtures/errors.less' ]
                 }
+            },
+            customReporter: {
+                files: {
+                    src: [ 'test/fixtures/**/*.less' ]
+                },
+                options: {
+                    reporter: {
+                        name: "test-reporter",
+                        report: function(errors) {
+                            errors.forEach(function(error) {
+                                console.log("custom " + error.linter);
+                            });
+                        }
+                    }
+                }
             }
         },
 

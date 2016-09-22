@@ -57,4 +57,16 @@ describe( 'grunt-lesshint', function(){
             assert.equal( response.status, 0 );
         });
     });
+
+    describe( 'customReporter', function(){
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:customReporter' ], {
+            encoding: 'utf8'
+        });
+
+        it( 'This assertion should use custom reporter to log error', function() {
+            assert.equal( response.status, 3 );
+            assert(response.stdout.indexOf("custom spaceBeforeBrace") >= 0);
+            assert(response.stdout.indexOf("custom spaceAfterPropertyColon") >= 0);
+        });
+    });
 });

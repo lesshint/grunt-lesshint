@@ -105,7 +105,9 @@ module.exports = function( grunt ){
 
                 grunt.log.warn( response );
 
-                if (errorCount > 0) {
+                if (options.allowWarnings === true && errorCount === 0) {
+                    success = true;
+                } else {
                     success = false;
                 }
             } else {

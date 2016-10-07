@@ -69,4 +69,24 @@ describe( 'grunt-lesshint', function(){
             assert(response.stdout.indexOf("custom spaceAfterPropertyColon") >= 0);
         });
     });
+
+    describe( 'allowWarnings', function(){
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:allowWarnings' ], {
+            encoding: 'utf8'
+        });
+
+        it( 'This assertion should succeed and exit with status code 0 (No errors!)', function(){
+            assert.equal( response.status, 0 );
+        });
+    });
+
+    describe( 'allowWarningsWithError', function(){
+        var response = spawnSync( 'node', [ gruntPath, 'lesshint:allowWarningsWithError' ], {
+            encoding: 'utf8'
+        });
+
+        it( 'This assertion should exit with status code 3 (Task error)', function(){
+            assert.equal( 3, response.status );
+        } );
+    });
 });

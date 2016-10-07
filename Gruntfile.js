@@ -74,8 +74,12 @@ module.exports = function( grunt ){
             },
             customOptions: {
                 options: {
-                    spaceAfterPropertyColon: 'no_space',
-                    spaceBeforeBrace: 'no_space'
+                    spaceAfterPropertyColon: {
+                        style: 'no_space'
+                    },
+                    spaceBeforeBrace: {
+                        style: 'no_space'
+                    }
                 },
                 files: {
                     src: [ 'test/fixtures/errors.less' ]
@@ -102,6 +106,29 @@ module.exports = function( grunt ){
                             });
                         }
                     }
+                }
+            },
+            allowWarnings: {
+                options: {
+                    allowWarnings: true,
+                    spaceAfterPropertyColon: {
+                        style: 'one_space'
+                    }
+                },
+                files: {
+                    src: [ 'test/fixtures/warnings.less' ]
+                }
+            },
+            allowWarningsWithError: {
+                options: {
+                    allowWarnings: true,
+                    spaceAfterPropertyColon: {
+                        style: 'one_space',
+                        severity: "error"
+                    }
+                },
+                files: {
+                    src: [ 'test/fixtures/warnings.less' ]
                 }
             }
         },

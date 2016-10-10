@@ -105,6 +105,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2016-10-10|1.4.0|Added support for allowing warnings without exiting. Thanks [@mmckenziedev](https://github.com/mmckenziedev)!|
 |2016-09-22|1.3.0|Added support for custom reporters. Thanks [@scttdavs](https://github.com/scttdavs)!|
 |2016-09-05|1.2.0|<ul><li>Update grunt to 1.0.0</li><li>Update lesshint to 2.0.0</li><li>Added node 6.* to Travis</li></ul>|
 |2016-01-26|1.1.1|Update grunt-contrib-jshint to 0.12.0|

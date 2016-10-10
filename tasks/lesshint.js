@@ -37,6 +37,7 @@ module.exports = function( grunt ){
             var errorCount = 0,
                 errorFileCount = 0,
                 cleanFileCount = 0,
+                warningCount = 0,
                 response;
 
             if( !files.src.length ){
@@ -54,7 +55,13 @@ module.exports = function( grunt ){
                             // use custom reporter if there
                             options.reporter.report(output);
                             errorFileCount += 1;
-                            errorCount += output.length;
+                            output.forEach(function (reportObject) {
+                                if (reportObject.severity === "error") {
+                                    errorCount = errorCount + 1;
+                                } else {
+                                    warningCount = warningCount + 1;
+                                }
+                            });
                         } else {
                             // use built in reporter
                             errorFileCount = errorFileCount + 1;
@@ -62,10 +69,15 @@ module.exports = function( grunt ){
 
                             grunt.log.writeln();
                             grunt.log.subhead( '  ' + filepath );
-                            output.forEach( function( errorObject ){
-                                errorCount = errorCount + 1;
-                                grunt.log.writeln( '    ' + errorObject.line + ' | ' + chalk.gray( inputArray[ errorObject.line - 1 ] ) );
-                                grunt.log.writeln( grunt.util.repeat( errorObject.column + 7, ' ' ) + '^ ' + errorObject.message );
+                            output.forEach(function (reportObject) {
+                                if (reportObject.severity === "error") {
+                                    errorCount = errorCount + 1;
+                                } else {
+                                    warningCount = warningCount + 1;
+                                }
+
+                                grunt.log.writeln( '    ' + reportObject.line + ' | ' + chalk.gray( inputArray[ reportObject.line - 1 ] ) );
+                                grunt.log.writeln( grunt.util.repeat( reportObject.column + 7, ' ' ) + '^ ' + reportObject.message );
                             });
 
                             grunt.log.writeln();
@@ -79,8 +91,11 @@ module.exports = function( grunt ){
                 grunt.fail.fatal( error );
             }
 
-            if( errorCount > 0 ){
-                response = errorCount + grunt.util.pluralize( errorCount, ' error in / errors in ' ) + errorFileCount + grunt.util.pluralize( errorFileCount, ' file/ files' );
+            if (warningCount > 0 || errorCount > 0) {
+                response =
+                    warningCount + grunt.util.pluralize(errorCount, ' warning/ warnings') +
+                    " and " + errorCount + grunt.util.pluralize(errorCount, ' error in / errors in ') +
+                    errorFileCount + grunt.util.pluralize(errorFileCount, ' file/ files');
 
                 if( cleanFileCount > 0 ){
                     response = response + ' and ' + cleanFileCount + grunt.util.pluralize( cleanFileCount, ' clean file./ clean files.' );
@@ -90,7 +105,11 @@ module.exports = function( grunt ){
 
                 grunt.log.warn( response );
 
-                success = false;
+                if (options.allowWarnings === true && errorCount === 0) {
+                    success = true;
+                } else {
+                    success = false;
+                }
             } else {
                 grunt.log.ok( cleanFileCount + grunt.util.pluralize( cleanFileCount, ' file / files ' ) + 'without linting errors.' );
             }

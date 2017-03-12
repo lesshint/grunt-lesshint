@@ -8,7 +8,7 @@
 
 'use strict';
 
-var Lesshint = require( 'lesshint' ),
+var Lesshint = require( 'lesshint' ).Lesshint,
     chalk = require( 'chalk' ),
     configLoader = require( 'lesshint/lib/config-loader' );
 

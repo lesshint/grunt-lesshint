@@ -39,6 +39,6 @@
   "dependencies": {
     "grunt": "^1.0.1",
     "chalk": "^1.1.1",
-    "lesshint": "^2.0.0"
+    "lesshint": "^3.0.0"
   }
 }

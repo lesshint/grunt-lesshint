@@ -105,6 +105,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 |Date|Version|Changes|
 |---|---|---|
+|2017-04-21|1.5.1|Fix so we don't break if Lesshint changes config setup in the future|
 |2017-03-12|1.5.0|<ul><li>Update lesshint to 3.0.0</li><li>Update grunt-mocha-test to 0.13.2</li><li>Update mocha to 3.2.0</li></ul>|
 |2016-10-10|1.4.0|Added support for allowing warnings without exiting. Thanks [@mmckenziedev](https://github.com/mmckenziedev)!|
 |2016-09-22|1.3.0|Added support for custom reporters. Thanks [@scttdavs](https://github.com/scttdavs)!|
